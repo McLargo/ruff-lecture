@@ -1,0 +1,35 @@
+name: ci-ruff
+on: push
+
+jobs:
+   checks:
+    runs-on: ubuntu-latest
+    steps:
+      # =================================
+      # Check-out repo
+      # =================================
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      # =================================
+      # Run ruff check
+      # =================================
+      - name: Run ruff check
+        uses: astral-sh/ruff-action@v3
+        with:
+          src: "./src"
+          args: "check --diff"
+
+
+      # =================================
+      # Run ruff format
+      # =================================
+      - name: Run ruff format
+        uses: astral-sh/ruff-action@v3
+        with:
+          src: "./src"
+          args: "format --check --diff"

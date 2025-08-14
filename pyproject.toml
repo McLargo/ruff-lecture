@@ -6,6 +6,8 @@ output-format = "grouped"
 
 show-fixes = true
 
+src = ["src"]
+
 [tool.ruff.analyze]
 detect-string-imports = true
 

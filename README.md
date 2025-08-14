@@ -172,8 +172,10 @@ automatically check and format code.
 
 ### Github actions
 
-WIP
-- [GitHub Actions](https://github.com/astral-sh/ruff-action).
+ [GitHub Actions](https://github.com/astral-sh/ruff-action) can be used to run
+ Ruff as part of your CI/CD pipeline. This ensures that code is checked and
+ formatted before it is merged into the main branch, helping to maintain code
+ quality and consistency across the project.
 
 ## References
 
