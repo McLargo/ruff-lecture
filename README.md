@@ -1,5 +1,10 @@
 # Ruff lecture
 
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![ci-ruff](https://github.com/McLargo/ruff-lecture/actions/workflows/ci-ruff.yml/badge.svg?branch=master)](https://github.com/McLargo/ruff-lecture/actions/workflows/ci-ruff.yml)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+
+
 Ruff is a linter and formatter for code written in Python. It is used in many
 open source projects.
 
