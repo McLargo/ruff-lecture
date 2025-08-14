@@ -32,6 +32,9 @@ As mentioned, Ruff can also be installed using other package managers like
 `poetry` or `uv` for your Python projects. Use `--dev` flag to install it as a
 development dependency.
 
+You can check if ruff is ready by executing `ruff help` to display all the
+commands available and the corresponding arguments.
+
 ## Ruff linter
 
 Ruff offers a [lint]((https://docs.astral.sh/ruff/linter/#the-ruff-linter)) to
@@ -61,13 +64,16 @@ ruff format /path/to/code
 
 ## Rules
 
-Ruff supports a huge set of rules that can be used to check your code. By default, there is a set of rules enabled, but you can customize it to fit your needs.
+Ruff supports a huge set of rules that can be used to check your code. By
+default, there is a set of rules enabled, but you can customize it to fit your
+needs.
 
 It is important to make your rules explicit to have full control. Try with a
 small set of rules, and expand from there.
 
 Whole list of rules can be found in the
-[Ruff documentation](https://docs.astral.sh/ruff/rules/), but here are my own selection of rules (will see more details in the example sections):
+[Ruff documentation](https://docs.astral.sh/ruff/rules/), but here are my own
+selection of rules (will see more details in the example sections):
 
 - ERA: find commented-out code.
 - ANN: flake8 annotations.
@@ -95,7 +101,6 @@ Whole list of rules can be found in the
 - I: isort module.
 - N: ensures pep8 naming.
 - E,W: pycodestyle.
-- DOC: pydoclint supporting docstring styles like numpy, google and sphinx.
 - D: check compliances of docstring convention.
 - F: pyflakes rules.
 - PL, PLC, PLE, PLR, PLW: pylint rules.
@@ -137,13 +142,37 @@ fmt: on
 
 ## Configuration
 
-WIP
+Ruff has a default configuration. See more details in
+[official documentation](https://docs.astral.sh/ruff/configuration/#__tabbed_1_1).
+
+Important settings are:
+
+- exclude: list of directories to ignore.
+- line-length: preferred line length.
+- indent-wide: preferred indentation width.
+- target-version: python version.
+- lint.select: rules to enable.
+- lint.ignore: rule to disable.
+- lint.fixable: rules with fix enable.
+- lint.unfixable: rules to not apply fix.
+
+See
+[entire catalog of settings available](https://docs.astral.sh/ruff/settings/).
 
 ## Other integrations
 
-WIP
+Ruff can be integrated with various tools and services to ensure code quality
+across different environments.
 
-- [pre-commit hook](https://docs.astral.sh/ruff/tutorial/#integrations) and
+### Pre-commit
+
+Ruff can be used as a
+[pre-commit hook](https://docs.astral.sh/ruff/tutorial/#integrations) to
+automatically check and format code.
+
+### Github actions
+
+WIP
 - [GitHub Actions](https://github.com/astral-sh/ruff-action).
 
 ## References
