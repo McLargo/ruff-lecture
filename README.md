@@ -4,7 +4,6 @@
 [![ci-ruff](https://github.com/McLargo/ruff-lecture/actions/workflows/ci-ruff.yml/badge.svg?branch=master)](https://github.com/McLargo/ruff-lecture/actions/workflows/ci-ruff.yml)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 
-
 Ruff is a linter and formatter for code written in Python. It is used in many
 open source projects.
 
@@ -163,6 +162,24 @@ Important settings are:
 
 See
 [entire catalog of settings available](https://docs.astral.sh/ruff/settings/).
+
+## Repo usage
+
+This repository contains two files:
+
+- `src/ruff_ok.py`: a simple class to represent a Ruff OK response.
+- `src/ruff_ko.py`: a simple class to represent a Ruff error response. Remove
+  noqa and fmt directives to see how Ruff works in a file with issues.
+
+To test ruff, you can run the following command:
+
+```bash
+ruff check
+ruff format
+```
+
+This will check the code for any issues and format it according to the rules
+defined in the configuration file.
 
 ## Other integrations
 
